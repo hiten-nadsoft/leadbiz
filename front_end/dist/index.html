@@ -133,12 +133,12 @@
                                 <div class="form__article">
 
                                     <div class="mdl-grid">
-                                        <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label resize">
                                             <input class="mdl-textfield__input" type="text" id="firstName" value=""/>
                                             <label class="mdl-textfield__label" for="firstName">Keyword</label>
                                         </div>
 
-                                        <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                                        <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select resize">
                                             <input class="mdl-textfield__input" value="None" type="text" id="filter_by_type" readonly tabIndex="-1"/>
 
                                             <label class="mdl-textfield__label" for="filter_by_type">Filter by Type</label>
@@ -154,12 +154,12 @@
                                     </div>
 
                                     <div class="mdl-grid">
-                                        <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label resize">
                                             <input class="mdl-textfield__input" type="text" id="location" value="Mumbai"/>
                                             <label class="mdl-textfield__label" for="location">Location (city, state, country or zip/postal code)</label>
                                         </div>
 
-                                        <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                                        <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select resize">
                                             <input class="mdl-textfield__input" value="15km / 9.3 miles" type="text" id="gender" readonly tabIndex="-1"/>
 
                                             <label class="mdl-textfield__label" for="gender">Radius</label>
@@ -176,7 +176,7 @@
                                 </div>
 
                                 <div class="form__action" style="margin-top:0px;">
-                                    <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                                    <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select resize">
                                         <input class="mdl-textfield__input" value="10" type="text" id="per_page" readonly tabIndex="-1"/>
 
                                         <label class="mdl-textfield__label" for="per_page">Results per Page</label>
@@ -704,9 +704,11 @@
             $(document).ready(function () {
                 $("#submit_button").click(function(){
                     $("#section_1").css('float','left');
-                    $("#section_1").css('width','40%');
-//                    $("#section_2").css('display','block');
+                    $("#section_1").css('width','30%');
+                    $("#section_2").css('width','70%');
                     $("#section_2").delay(1000).fadeIn();
+                    $(".resize").css('width','100%');
+                    $("#submit_button").css('width','100%');
                     $('#example').DataTable({
                         columnDefs: [
                             {
